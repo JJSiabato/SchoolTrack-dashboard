@@ -211,7 +211,7 @@ export default function CoursesPage() {
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="director" className="text-right">Director</Label>
               <div className="col-span-3">
-                <Select value={formData.directorId} onValueChange={(v) => setFormData({ ...formData, directorId: v })}>
+                <Select value={formData.directorId} onValueChange={(v) => setFormData({ ...formData, directorId: v || "" })}>
                   <SelectTrigger>
                     <SelectValue placeholder="Seleccionar profesor" />
                   </SelectTrigger>
@@ -226,7 +226,7 @@ export default function CoursesPage() {
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="schedule" className="text-right">Jornada</Label>
               <div className="col-span-3">
-                <Select value={formData.schedule} onValueChange={(v) => setFormData({ ...formData, schedule: v })}>
+                <Select value={formData.schedule} onValueChange={(v) => setFormData({ ...formData, schedule: v || "Morning" })}>
                   <SelectTrigger>
                     <SelectValue placeholder="Seleccionar jornada" />
                   </SelectTrigger>
