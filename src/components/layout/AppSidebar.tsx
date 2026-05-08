@@ -88,13 +88,13 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>Menu Principal</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="gap-2">
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton isActive={pathname === item.url}>
-                    <Link href={item.url} className="flex items-center gap-2 w-full">
-                      <item.icon className="size-4" />
-                      <span>{item.title}</span>
+                    <Link href={item.url} className="flex items-center gap-3 w-full py-2">
+                      <item.icon className="size-5" />
+                      <span className="text-base">{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

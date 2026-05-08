@@ -25,8 +25,7 @@ export default function RootLayout({
       <body className={`${inter.variable} min-h-screen font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
           disableTransitionOnChange
         >
           <TooltipProvider>
